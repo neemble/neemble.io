@@ -1,19 +1,64 @@
 import React from "react";
 import rFoot from "../assets/roadmapline.png";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
+
 function Roadmap() {
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
+  const anime = useAnimation();
+  const lAnime = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      anime.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 1,
+          bounce: 0.3,
+        },
+      });
+      lAnime.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 1,
+          bounce: 0,
+        },
+      });
+    }
+    if (!inView) {
+      anime.start({
+        x: "100vw",
+      });
+      lAnime.start({
+        x: "-100vw",
+      });
+    }
+  }, [inView]);
   return (
     <>
       {/* ROADMAP */}
-      <div className="flex py-14 justify-center items-center w-screen bg-[#2d0045] ">
+      <div
+        ref={ref}
+        className="flex py-14 justify-center items-center w-screen bg-[#2d0045] "
+      >
         {/* tab */}
         <div className="flex flex-col justify-center items-center w-screen">
           <h1 className="text-white font-semibold text-5xl">Roadmap</h1>
           <div>
-            <div className="grid grid-cols-3 gap-14 py-14">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-14 py-14">
               {/* card */}
 
-              <div className="border-2 border-[#9600e7] flex justify-center flex-col items-center rounded-xl bg-[#4c0178]   w-[340px] h-[450px]">
+              <motion.div
+                animate={lAnime}
+                className="border-2 border-[#9600e7] flex justify-center flex-col items-center rounded-xl bg-[#4c0178]   w-[340px] h-[450px]"
+              >
                 <h1 className="py-4 text-3xl text-white font-semibold">
                   ✅ Tasks Complete
                 </h1>
@@ -32,7 +77,7 @@ function Roadmap() {
                 <p className="bg-[#3d0565] py-2 px-2 text-white rounded-lg">
                   Phase 1
                 </p>
-              </div>
+              </motion.div>
               <div className="border-2 border-[#9600e7] flex justify-center flex-col items-center rounded-xl bg-[#4c0178]   w-[340px] h-[450px]">
                 <h1 className="py-4 text-3xl text-white font-semibold">
                   ✅ Tasks Complete
@@ -55,7 +100,10 @@ function Roadmap() {
                   Phase 2
                 </p>
               </div>
-              <div className="border-2 border-[#9600e7] flex justify-center flex-col items-center rounded-xl bg-[#4c0178]   w-[340px] h-[450px]">
+              <motion.div
+                animate={anime}
+                className="border-2 border-[#9600e7] flex justify-center flex-col items-center rounded-xl bg-[#4c0178]   w-[340px] h-[450px]"
+              >
                 <h1 className="py-4 text-3xl text-white font-semibold">
                   💻 Tasks in process
                 </h1>
@@ -77,13 +125,12 @@ function Roadmap() {
                 <p className="bg-[#3d0565] py-2 px-2 text-white rounded-lg">
                   Phase 3
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
-          <div>
-            {" "}
+          <motion.div animate={lAnime}>
             <Image src={rFoot} />
-          </div>
+          </motion.div>
         </div>
         {/* tab */}
       </div>

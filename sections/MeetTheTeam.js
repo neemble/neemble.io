@@ -1,20 +1,63 @@
 import React from "react";
 import Team from "../components/Team";
 import { DATA } from "../components/TeamData";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 function MeetTheTeam() {
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
+  const anime = useAnimation();
+  const lAnime = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      anime.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 1,
+          bounce: 0.3,
+        },
+      });
+      lAnime.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 1,
+          bounce: 0,
+        },
+      });
+    }
+    if (!inView) {
+      anime.start({
+        x: "100vw",
+      });
+      lAnime.start({
+        x: "-100vw",
+      });
+    }
+  }, [inView]);
   return (
     <>
-      {" "}
       {/* Meet the Team */}
-      <div className="flex flex-col py-16 justify-center items-center w-screen bg-[#0d1733] ">
+      <div
+        ref={ref}
+        className="flex flex-col py-16 justify-center items-center w-screen bg-[#0d1733] "
+      >
         {/* tab */}
         <div className="flex justify-center items-center w-screen bg-royal">
           <h1 className="text-white font-semibold text-5xl">Meet The Team</h1>
         </div>
         {/* tab */}
 
-        <div className="py-14 grid grid-cols-3 gap-14">
+        <motion.div
+          animate={anime}
+          className="py-14 grid grid-cols-1 lg:grid-cols-3 gap-14"
+        >
           {DATA.map((team) => (
             <Team
               tName={team.name}
@@ -23,7 +66,7 @@ function MeetTheTeam() {
               tImage={team.img}
             />
           ))}
-        </div>
+        </motion.div>
       </div>
       {/* team */}
     </>

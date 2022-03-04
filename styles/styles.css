@@ -1,8 +1,10 @@
 body {
   background-color: rgb(15, 23, 46);
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
+  display: none;
 }
 
 .bg-vid {
