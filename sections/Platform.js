@@ -54,13 +54,13 @@ function Platform() {
             animate={lAnime}
             className="w-[200px] md:w-[300px] lg:w-[400px]  h-[auto] hover:border-2 hover:rounded-md cursor-pointer"
           >
-            <Image src={p1} />
+            <Image src={p1} placeholder="blur" />
           </motion.div>
           <motion.div
             animate={anime}
             className=" w-[200px] md:w-[300px] lg:w-[400px] h-[auto] hover:border-2 hover:rounded-md cursor-pointer"
           >
-            <Image src={p2} />
+            <Image src={p2} placeholder="blur" />
           </motion.div>
         </div>
         <div className="mt-14">
@@ -68,7 +68,7 @@ function Platform() {
             animate={lAnime}
             className="w-[450px] md:w-[700px] lg:w-[965px] h-[auto]  hover:border-2 hover:rounded-md cursor-pointer"
           >
-            <Image src={p3} />
+            <Image src={p3} placeholder="blur" />
           </motion.div>
         </div>
       </div>

@@ -49,7 +49,7 @@ function Section4() {
         className=" px-5 lg:px-0 lg:py-14 bg-vid flex flex-col lg:flex-row justify-center lg:justify-evenly  items-center w-screen"
       >
         <motion.div animate={lAnime} className="pb-14 lg:pb-0 lg:w-2/5 w-full">
-          <Image src={cardImage}></Image>
+          <Image src={cardImage} placeholder="blur"></Image>
         </motion.div>
         <div className=" flex justify-center items-center lg:w-1/2 w-full h-96">
           <motion.div

@@ -1,11 +1,10 @@
 import React from "react";
-import fVid from "../assets/videos/first.gif";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 function Section1() {
   return (
-    <div className="py-4 lg:py-24 bg-vid flex flex-col lg:flex-row justify-center lg:justify-evenly lg:items-start items-center w-screen">
+    <div className="py-4 lg:py-44 bg-vid flex flex-col lg:flex-row justify-center lg:justify-evenly lg:items-start items-center w-screen">
       <div className="flex justify-center items-center w-full lg:w-1/2 h-96">
         <motion.div
           initial={{ x: "-100vw" }}
@@ -34,7 +33,17 @@ function Section1() {
         animate={{ x: 0 }}
         className="py-4 lg:py-0 w-full lg:w-1/2"
       >
-        <Image src={fVid}></Image>
+        <div className="framer2">
+          <iframe
+            src="https://streamable.com/e/zxqtwg?autoplay=1&nocontrols=1"
+            frameborder="0"
+            width="100%"
+            height="100%"
+            allowfullscreen
+            allow="autoplay"
+            className="framer"
+          ></iframe>
+        </div>
       </motion.div>
     </div>
   );

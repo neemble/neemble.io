@@ -28,10 +28,10 @@ function Navbar() {
           </ul>
         </div>
         <div className="hidden lg:flex space-x-6">
-          <button className=" text-sm  border-2 border-blue-500 py-1 px-2 rounded">
+          <button className="link-click text-sm  border-2 border-blue-500 py-1 px-2 rounded">
             Twitter
           </button>
-          <button className="text-lg link border-2 border-cyan-400  py-1 px-3 rounded">
+          <button className="link-click text-lg link border-2 border-cyan-400  py-1 px-3 rounded">
             Neemble Demo
           </button>
         </div>

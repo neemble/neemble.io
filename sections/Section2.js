@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import Image from "next/image";
-import fVid from "../assets/videos/first.gif";
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
 import { motion } from "framer-motion";
@@ -48,7 +46,17 @@ function Section2() {
         className="py-4 lg:px-0 px-8 lg:py-0 bg-vid flex flex-col lg:flex-row justify-center lg:justify-evenly lg:items-start items-center w-screen"
       >
         <motion.div animate={lAnime} className="py-10 lg:py-0 lg:w-2/5 w-full ">
-          <Image src={fVid}></Image>
+          <div className="framer2">
+            <iframe
+              src="https://streamable.com/e/zhett5?autoplay=1&nocontrols=1"
+              frameborder="0"
+              width="100%"
+              height="100%"
+              allowfullscreen
+              allow="autoplay"
+              className="framer"
+            ></iframe>
+          </div>
         </motion.div>
         <div className=" flex justify-center items-center lg:w-1/2 w-full ">
           <motion.div

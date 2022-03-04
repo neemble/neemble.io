@@ -34,7 +34,7 @@ function NMBL() {
       className="flex justify-center items-center w-screen  bg-royal"
     >
       <motion.div animate={anime} className="w-[450px] lg:w-[900px] h-[auto]">
-        <Image src={chart1}></Image>
+        <Image src={chart1} placeholder="blur"></Image>
       </motion.div>
     </div>
   );

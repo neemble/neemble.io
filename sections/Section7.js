@@ -1,6 +1,5 @@
 import React from "react";
-import Image from "next/image";
-import promo2 from "../assets/promo2.png";
+
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
 import { motion } from "framer-motion";
@@ -72,7 +71,17 @@ function Section7() {
           </motion.div>
         </div>
         <motion.div animate={anime} className="w-full lg:w-2/5">
-          <Image src={promo2}></Image>
+          <div className="framer2">
+            <iframe
+              src="https://streamable.com/e/o8wyhm?autoplay=1&nocontrols=1"
+              frameborder="0"
+              width="100%"
+              height="100%"
+              allowfullscreen
+              allow="autoplay"
+              className="framer"
+            ></iframe>
+          </div>
         </motion.div>
       </div>
     </>

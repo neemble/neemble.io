@@ -36,7 +36,7 @@ function Streamer() {
       className=" flex justify-center items-center w-screen py-14 bg-royal"
     >
       <motion.div animate={lAnime} className="w-[400px]  lg:w-[700px] h-[auto]">
-        <Image src={chart2}></Image>
+        <Image src={chart2} placeholder="blur"></Image>
       </motion.div>
     </div>
   );

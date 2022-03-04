@@ -79,7 +79,7 @@ function Section3() {
           </motion.div>
         </div>
         <motion.div animate={anime} className="py-14 lg:py-0 lg:w-2/5 w-full">
-          <Image src={globes}></Image>
+          <Image src={globes} placeholder="blur"></Image>
         </motion.div>
       </div>
     </>

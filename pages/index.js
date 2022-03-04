@@ -10,7 +10,6 @@ import Section6 from "../sections/Section6";
 import Section7 from "../sections/Section7";
 import Platform from "../sections/Platform";
 import NMBL from "../sections/NMBL";
-
 import Streamer from "../sections/Streamer";
 import Pool from "../sections/Pool";
 import Roadmap from "../sections/Roadmap";
@@ -19,6 +18,14 @@ import MeetTheTeam from "../sections/MeetTheTeam";
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Neemble</title>
+        <meta
+          name="description"
+          content="Neemble The Ultimate blockchain watch to earn
+          & stream to earn platform"
+        />
+      </Head>
       <Navbar />
       <Section1 />
       <Section2 />

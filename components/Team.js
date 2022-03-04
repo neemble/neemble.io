@@ -5,7 +5,7 @@ function Team({ tImage, tName, tTitle, tBio }) {
   return (
     <div className="team rounded-xl h-44 w-96 flex justify-center items-center ">
       <div className="w-2/5">
-        <Image width={140} height={140} src={tImage} />
+        <Image width={140} height={140} src={tImage} placeholder="blur" />
       </div>
       <div className="w-3/5 ">
         <h1 className="text-white text-2xl">{tName}</h1>
