@@ -2,6 +2,9 @@ body {
   background-color: rgb(15, 23, 46);
 }
 
+body::-webkit-scrollbar {
+}
+
 .bg-vid {
   background: url("../assets/videos/bg.gif") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -14,6 +17,12 @@ body {
 .bg-glass {
   backdrop-filter: blur(40px);
   box-shadow: 0 0 9px skyblue;
+}
+
+.bg-glass-1 {
+  backdrop-filter: blur(49px);
+  box-shadow: 0 0 70px #49b6df;
+  border: 2px solid #306aa5;
 }
 
 .link {
@@ -47,4 +56,12 @@ body {
   z-index: -1;
   left: 0px;
   top: 0px;
+}
+
+.bg-royal {
+  background: #0d1834;
+}
+
+.team {
+  box-shadow: 0 0 10px #00d8fa;
 }
