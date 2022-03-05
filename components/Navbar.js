@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/neemble-logo.png";
 import Image from "next/image";
-import ReactPlayer from "react-player";
+import play from "../assets/Play.png";
 
 function Navbar() {
   const [menu, setMenu] = useState(false);
@@ -11,29 +11,30 @@ function Navbar() {
   };
   return (
     <>
-      <div className="fixed z-50 border-b-2 border-b-blue-500  text-white navbar px-6 flex justify-between items-center w-screen h-20">
+      <div className="bg-glass-high fixed z-50 border-b-2 border-b-[#00D8FA]  text-white navbar px-6 flex justify-between items-center w-screen h-20">
         <div>
-          <ul className="hidden cursor-pointer lg:flex items-center space-x-8">
+          <ul className="hidden cursor-pointer lg:flex items-center space-x-9">
             <li className="w-14 h-auto">
               <Image src={logo} />
             </li>
-            <li className="link border-2 border-blue-500 rounded-lg px-1 py-1">
+            <li className="text-xl link border-2 border-[#00D8FA] rounded-[7px] px-3 py-1">
               Neemble
             </li>
-            <li>Streamer Token</li>
-            <li>Tekenomics</li>
-            <li>Road Map</li>
-            <li>Team</li>
-            <li>Social</li>
+            <li className="text-xl">Streamer Token</li>
+            <li className="text-xl">Tekenomics</li>
+            <li className="text-xl">Road Map</li>
+            <li className="text-xl">Team</li>
+            <li className="text-xl">Social</li>
           </ul>
         </div>
-        <div className="hidden lg:flex space-x-6">
-          <button className="link-click text-sm  border-2 border-blue-500 py-1 px-2 rounded">
+        <div className="hidden lg:flex justify-center items-center space-x-6">
+          <button className="link-click text-sm  border-2 border-[#36B9FF] h-6 px-3  rounded">
             Twitter
           </button>
-          <button className="link-click text-lg link border-2 border-cyan-400  py-1 px-3 rounded">
-            Neemble Demo
-          </button>
+          <div className="flex justify-center items-center space-x-2 border-2 border-[#00D8FA] py-1 px-3 rounded">
+            <Image width={25} height={25} src={play}></Image>
+            <button className="">Neemble Demo</button>
+          </div>
         </div>
 
         {/* mobile menu */}

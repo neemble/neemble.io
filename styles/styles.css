@@ -37,7 +37,12 @@ body::-webkit-scrollbar {
 
   box-shadow: 0 0 9px skyblue;
 }
+.bg-glass-high {
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
 
+  box-shadow: 0 0 9px skyblue;
+}
 .bg-glass-1 {
   backdrop-filter: blur(49px);
   box-shadow: 0 0 70px #49b6df;
