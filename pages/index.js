@@ -1,19 +1,23 @@
 import Head from "next/head";
 import Image from "next/image";
-import Navbar from "../components/Navbar";
-import Section1 from "../sections/Section1";
-import Section2 from "../sections/Section2";
-import Section3 from "../sections/Section3";
-import Section4 from "../sections/Section4";
-import Section5 from "../sections/Section5";
-import Section6 from "../sections/Section6";
-import Section7 from "../sections/Section7";
-import Platform from "../sections/Platform";
-import NMBL from "../sections/NMBL";
-import Streamer from "../sections/Streamer";
-import Pool from "../sections/Pool";
-import Roadmap from "../sections/Roadmap";
-import MeetTheTeam from "../sections/MeetTheTeam";
+import dynamic from "next/dynamic";
+
+const Navbar = dynamic(() => import("../components/Navbar"));
+
+const Section1 = dynamic(() => import("../sections/Section1"));
+const Section2 = dynamic(() => import("../sections/Section2"));
+const Section3 = dynamic(() => import("../sections/Section3"));
+const Section4 = dynamic(() => import("../sections/Section4"));
+const Section5 = dynamic(() => import("../sections/Section5"));
+const Section6 = dynamic(() => import("../sections/Section6"));
+const Section7 = dynamic(() => import("../sections/Section7"));
+
+const Platform = dynamic(() => import("../sections/Platform"));
+const NMBL = dynamic(() => import("../sections/NMBL"));
+const Streamer = dynamic(() => import("../sections/Streamer"));
+const Pool = dynamic(() => import("../sections/Pool"));
+const Roadmap = dynamic(() => import("../sections/Roadmap"));
+const MeetTheTeam = dynamic(() => import("../sections/MeetTheTeam"));
 
 export default function Home() {
   return (

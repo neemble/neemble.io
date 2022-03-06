@@ -1,5 +1,7 @@
 import React from "react";
-import Team from "../components/Team";
+import dynamic from "next/dynamic";
+
+const Team = dynamic(() => import("../components/Team"));
 import { DATA } from "../components/TeamData";
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
