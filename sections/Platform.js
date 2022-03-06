@@ -18,11 +18,12 @@ function Platform() {
   useEffect(() => {
     if (inView) {
       anime.start({
-        x: 0,
+        y: 0,
+        opacity: 1,
         transition: {
           type: "spring",
-          duration: 1,
-          bounce: 0.3,
+          duration: 2,
+          bounce: 0,
         },
       });
       lAnime.start({
@@ -30,13 +31,14 @@ function Platform() {
         transition: {
           type: "spring",
           duration: 1,
-          bounce: 0.3,
+          bounce: 0,
         },
       });
     }
     if (!inView) {
       anime.start({
-        x: "100vw",
+        y: "15vw",
+        opacity: 0,
       });
       lAnime.start({
         x: "-100vw",
@@ -51,14 +53,14 @@ function Platform() {
       >
         <div className="flex space-x-10 lg:space-x-40">
           <motion.div
-            animate={lAnime}
-            className="w-[200px] md:w-[300px] lg:w-[400px]  h-[auto] hover:border-2 hover:rounded-md cursor-pointer"
+            animate={anime}
+            className="w-[250px] md:w-[300px] lg:w-[400px]  h-[auto] hover:border-2 hover:rounded-md cursor-pointer"
           >
             <Image src={p1} placeholder="blur" />
           </motion.div>
           <motion.div
             animate={anime}
-            className=" w-[200px] md:w-[300px] lg:w-[400px] h-[auto] hover:border-2 hover:rounded-md cursor-pointer"
+            className=" w-[250px] md:w-[300px] lg:w-[400px] h-[auto] hover:border-2 hover:rounded-md cursor-pointer"
           >
             <Image src={p2} placeholder="blur" />
           </motion.div>
@@ -66,7 +68,7 @@ function Platform() {
         <div className="mt-14">
           <motion.div
             animate={lAnime}
-            className="w-[450px] md:w-[700px] lg:w-[965px] h-[auto]  hover:border-2 hover:rounded-md cursor-pointer"
+            className="w-[550px] md:w-[700px] lg:w-[965px] h-[auto]  hover:border-2 hover:rounded-md cursor-pointer"
           >
             <Image src={p3} placeholder="blur" />
           </motion.div>

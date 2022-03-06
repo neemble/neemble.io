@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import promo1 from "../assets/promo1.png";
+import promo1 from "../assets/app1.png";
 import apple from "../assets/appStore.png";
 import google from "../assets/googlePlay.png";
 import { useInView } from "react-intersection-observer";
@@ -22,7 +22,7 @@ function Section6() {
         transition: {
           type: "spring",
           duration: 1,
-          bounce: 0.3,
+          bounce: 0,
         },
       });
       lAnime.start({
@@ -30,7 +30,7 @@ function Section6() {
         transition: {
           type: "spring",
           duration: 1,
-          bounce: 0.3,
+          bounce: 0,
         },
       });
     }
@@ -46,54 +46,47 @@ function Section6() {
   return (
     <>
       {/* promo 1  */}
+
       <div
         ref={ref}
-        className=" px-5 lg:px-0 lg:py-24 bg-vid flex flex-col lg:flex-row justify-center lg:items-start lg:justify-evenly items-center w-screen"
+        className="bg-vid  flex lg:pt-0 flex-col lg:flex-row lg:space-x-8 lg:justify-around  justify-evenly items-center   w-screen lg:h-screen h-[120vh]"
       >
-        <motion.div animate={lAnime} className=" w-full lg:w-2/5">
-          <Image src={promo1}></Image>
+        {/* main red box */}
+        {/* image box */}
+
+        {/* {//50%% width} */}
+        <motion.div animate={lAnime} className="lg:w-2/5 w-[85%] ">
+          <Image src={promo1} />
         </motion.div>
-        <div className=" flex justify-center items-center w-full lg:w-1/2 h-96">
-          <motion.div
-            animate={anime}
-            className="rounded-md px-4 py-5 bg-glass border-2 border-cyan-700"
-          >
-            <div className=" flex flex-col justify-start items-start text-white py-4 px-4">
-              <h1 className="pb-4 lg:pb-14 lg:text-3xl text-2xl">
-                Introducing NFT Subscription Passes
-              </h1>
-              <p className=" text-sm lg:text-lg">
-                Neemble is a PC and Mobile first platform
-                <br />
-                <br />
-                We want mobile users to have access to all neemble platform has
-                to offer.
-                <br />
-                <br />
-                Mobile streaming platform will be released with Neemble Beta
-                release
-              </p>
-              <div className="w-full pt-8 flex justify-center items-center">
-                <div className="px-10">
-                  <Image
-                    className="cursor-pointer"
-                    width={180}
-                    height={50}
-                    src={apple}
-                  />
-                </div>
-                <div className="px-10 ">
-                  <Image
-                    className="cursor-pointer"
-                    width={180}
-                    height={50}
-                    src={google}
-                  />
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+
+        {/* image box */}
+        {/* glass yellow box */}
+        {/* {//45%% width} */}
+        <motion.div
+          animate={anime}
+          className="px-14 flex bg-glass-purple bg-black bg-opacity-60 text-white flex-col  justify-evenly items-start  lg:w-2/4 w-[90%]	 h-[600px]"
+        >
+          <h1 className="lg:text-[44px] text-3xl ">
+            IOS and Android Mobile Apps
+          </h1>
+          <h2 className="lg:text-[25px] text-xl  ">
+            Neemble is a PC and Mobile first platform
+            <br />
+            <br />
+            We want mobile users to have access to all neemble platform has to
+            offer.
+            <br />
+            <br />
+            Mobile streaming platform will be released with Neemble Beta release
+          </h2>
+
+          <div className="flex w-full justify-evenly ">
+            <Image src={google} />
+            <Image src={apple} />
+          </div>
+        </motion.div>
+
+        {/* glass box */}
       </div>
     </>
   );

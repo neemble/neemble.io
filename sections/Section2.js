@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
 import { motion } from "framer-motion";
+import web2 from "../assets/mac2.png";
+import Image from "next/image";
+
 function Section2() {
   const { ref, inView } = useInView({
     threshold: 0.2,
@@ -16,7 +19,7 @@ function Section2() {
         transition: {
           type: "spring",
           duration: 1,
-          bounce: 0.3,
+          bounce: 0,
         },
       });
       lAnime.start({
@@ -24,7 +27,7 @@ function Section2() {
         transition: {
           type: "spring",
           duration: 1,
-          bounce: 0.3,
+          bounce: 0,
         },
       });
     }
@@ -43,48 +46,48 @@ function Section2() {
       {/* another */}
       <div
         ref={ref}
-        className="py-4 lg:px-0 px-8 lg:py-0 bg-vid flex flex-col lg:flex-row justify-center lg:justify-evenly lg:items-start items-center w-screen"
+        className="bg-vid  flex lg:pt-0 pt-2 flex-col lg:flex-row lg:space-x-8 lg:justify-around  justify-evenly items-center   w-screen lg:h-screen h-[160vh]"
       >
-        <motion.div animate={lAnime} className="py-10 lg:py-0 lg:w-2/5 w-full ">
-          <div className="framer2">
-            <iframe
-              src="https://streamable.com/e/zhett5?autoplay=1&nocontrols=1"
-              frameborder="0"
-              width="100%"
-              height="100%"
-              allowfullscreen
-              allow="autoplay"
-              className="framer"
-            ></iframe>
-          </div>
+        {/* main red box */}
+        {/* image box */}
+
+        {/* {//50%% width} */}
+        <motion.div
+          animate={lAnime}
+          className="lg:-mt-32 lg:w-1/4 w-3/5 h-[540px] "
+        >
+          <Image src={web2} />
         </motion.div>
-        <div className=" flex justify-center items-center lg:w-1/2 w-full ">
-          <motion.div
-            animate={anime}
-            className="rounded-md px-4 py-5 bg-glass border-2 border-cyan-700"
-          >
-            <div className=" flex flex-col justify-start items-start text-white py-4 lg:px-4">
-              <h1 className="pb-4 lg:pb-14 lg:text-3xl text-2xl">
-                No More Donations
-              </h1>
-              <p className="lg:text-lg text-sm">
-                In 2020 game-streaming revenue reached over $9.2bln - at this
-                point a successful streamer is one of web 3.0 biggest assets
-                <br />
-                <br /> The market has grown tremendowsly, but the old financial
-                model still revolves around donations.
-                <br /> <br />
-                We are shutting down the “charity” model where streamers make
-                money on the goodwill of the audience.
-              </p>
-              <div className="pt-8 flex justify-center items-center space-x-14">
-                <button className="link rounded-md border-2 border-cyan-700 px-2 py-2">
-                  Further in Lightpaper
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+
+        {/* image box */}
+        {/* glass yellow box */}
+        {/* {//45%% width} */}
+        <motion.div
+          animate={anime}
+          className="px-14 flex rounded-md bg-glass text-white flex-col  justify-evenly items-start  lg:w-[45%] w-[90%]	 h-[550px]"
+        >
+          <h1 className="lg:text-[45px] text-3xl  text-center">
+            No more donations
+          </h1>
+          <h2 className="lg:text-[26px] text-xl  ">
+            In 2020 game-streaming revenue reached over $9.2bln - at this point
+            a successful streamer is one of web 3.0 biggest assets
+            <br />
+            <br />
+            The market has grown tremendowsly, but the old financial model still
+            revolves around donations.
+            <br />
+            <br />
+            We are shutting down the “charity” model where streamers make money
+            on the goodwill of the audience.
+          </h2>
+
+          <button className="rounded-md py-4 px-8 text-xl link">
+            Further in lightpaper
+          </button>
+        </motion.div>
+
+        {/* glass box */}
       </div>
     </>
   );

@@ -35,22 +35,30 @@ body::-webkit-scrollbar {
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
 
-  box-shadow: 0 0 9px skyblue;
+  box-shadow: 0 0 9px #00d8fa;
 }
 .bg-glass-high {
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
-
-  box-shadow: 0 0 9px skyblue;
+  box-shadow: 0 0 9px #00d8fa;
 }
+
+.bg-glass-purple {
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  box-shadow: 0 0 4px #e28fff;
+}
+
 .bg-glass-1 {
   backdrop-filter: blur(49px);
-  box-shadow: 0 0 70px #49b6df;
-  border: 2px solid #306aa5;
+
+  border: 4px solid #253277;
+  box-shadow: 0 0 15px #49b6df, 0 0 30px #49b6df, 0 0 60px #49b6df,
+    0 0 150px #49b6df;
 }
 
 .link {
-  box-shadow: 0 0 14px skyblue;
+  box-shadow: 0 0 14px #00d8fa;
 }
 
 .vi {

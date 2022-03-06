@@ -20,7 +20,7 @@ function Streamer() {
         transition: {
           type: "spring",
           duration: 1,
-          bounce: 0.3,
+          bounce: 0,
         },
       });
     }
@@ -35,7 +35,7 @@ function Streamer() {
       ref={ref}
       className=" flex justify-center items-center w-screen py-14 bg-royal"
     >
-      <motion.div animate={lAnime} className="w-[400px]  lg:w-[700px] h-[auto]">
+      <motion.div animate={lAnime} className="w-[550px]  lg:w-[700px] h-[auto]">
         <Image src={chart2} placeholder="blur"></Image>
       </motion.div>
     </div>

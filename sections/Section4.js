@@ -20,7 +20,7 @@ function Section4() {
         transition: {
           type: "spring",
           duration: 1,
-          bounce: 0.3,
+          bounce: 0,
         },
       });
       lAnime.start({
@@ -28,7 +28,7 @@ function Section4() {
         transition: {
           type: "spring",
           duration: 1,
-          bounce: 0.3,
+          bounce: 0,
         },
       });
     }
@@ -44,45 +44,53 @@ function Section4() {
   return (
     <>
       {/* 4 cards  */}
+      {/* another */}
       <div
         ref={ref}
-        className=" px-5 lg:px-0 lg:py-14 bg-vid flex flex-col lg:flex-row justify-center lg:justify-evenly  items-center w-screen"
+        className="bg-vid  flex lg:pt-0  flex-col lg:flex-row space-x-8 lg:justify-around  justify-evenly items-center   w-screen lg:h-screen h-[160vh]"
       >
-        <motion.div animate={lAnime} className="pb-14 lg:pb-0 lg:w-2/5 w-full">
-          <Image src={cardImage} placeholder="blur"></Image>
+        {/* main red box */}
+        {/* image box */}
+
+        {/* {//50%% width} */}
+        <motion.div animate={lAnime} className="lg:w-2/5 w-full ">
+          <Image src={cardImage} />
         </motion.div>
-        <div className=" flex justify-center items-center lg:w-1/2 w-full h-96">
-          <motion.div
-            animate={anime}
-            className="rounded-md px-4 py-5 bg-glass border-2 border-cyan-700"
+
+        {/* image box */}
+        {/* glass yellow box */}
+        {/* {//45%% width} */}
+        <motion.div
+          animate={anime}
+          className="px-14 flex rounded-lg bg-glass text-white flex-col  justify-evenly items-start  lg:w-2/4 w-[90%]	 h-[614px]"
+        >
+          <h1 className="lg:text-[40px] text-3xl ">
+            Introducing NFT Subscription Passes
+          </h1>
+          <h2 className="lg:text-[20px] text-xl">
+            NFT-Passes will let holders be elligible for: small and big streamer
+            token airdrops, NMBL token airdrops, NFT pass staking, streamer
+            token staking, white-list spots to private streamer token sales,
+            access to the streamer’s alpha chat and more...
+            <br />
+            <br />
+            Passes have 25 levels, and Mana is required to upgrade your
+            NFT-passes, mana is used to activate your rewards
+            <br />
+            <br />
+            In stead of the charity and ads based monetization model we aim to
+            turn every streamer into a free-to-watch, netflix-like subscription.
+          </h2>
+
+          <button
+            className="rounded-md py-2 px-8 lg:text-xl text-lg
+           border-2 border-white"
           >
-            <div className=" flex flex-col justify-start items-start text-white py-4 px-4">
-              <h1 className="pb-4 lg:pb-14 lg:text-3xl text-2xl">
-                Introducing NFT Subscription Passes
-              </h1>
-              <p className="text-sm lg:text-lg">
-                NFT-Passes will let holders be elligible for: small and big
-                streamer token airdrops, NMBL token airdrops, NFT pass staking,
-                streamer token staking, white-list spots to private streamer
-                token sales, access to the streamer’s alpha chat and more...
-                <br />
-                <br />
-                Passes have 25 levels, and Mana is required to upgrade your
-                NFT-passes, mana is used to activate your rewards
-                <br />
-                <br />
-                In stead of the charity and ads based monetization model we aim
-                to turn every streamer into a free-to-watch, netflix-like
-                subscription.
-              </p>
-              <div className="pt-8 flex justify-center items-center space-x-14">
-                <button className="link rounded-md border-2 border-cyan-700 px-2 py-2">
-                  Litepaper link: NFT Pass Subscription Model
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+            Litepaper link: NFT Pass Subscription Model
+          </button>
+        </motion.div>
+
+        {/* glass box */}
       </div>
     </>
   );

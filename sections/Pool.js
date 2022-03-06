@@ -15,16 +15,18 @@ function Pool() {
     if (inView) {
       lAnime.start({
         x: 0,
+        opacity: 1,
         transition: {
           type: "spring",
-          duration: 1,
-          bounce: 0.3,
+          duration: 3,
+          bounce: 0,
         },
       });
     }
     if (!inView) {
       lAnime.start({
-        x: "-100vw",
+        x: "30vh",
+        opacity: 0,
       });
     }
   }, [inView]);
@@ -35,19 +37,21 @@ function Pool() {
     >
       <motion.div
         animate={lAnime}
-        className=" flex justify-center flex-col items-center bg-glass-1 rounded-xl bg-[#3484ba]   w-[340px] h-96"
+        className=" flex justify-evenly flex-col items-center bg-glass-1 rounded-xl bg-[#3282b7] opacity-90 w-[450px] h-[550px]   lg:w-[600px] lg:h-[650px]"
       >
-        <h1 className="py-4 text-4xl text-white font-semibold">Neemble Pool</h1>
-        <ul className="font-semibold text-white flex flex-col">
-          <li className="py-2">
-            • Received in Watch to Earn/
+        <h1 className="py-4 lg:text-6xl text-5xl text-white font-semibold">
+          Neemble Pool
+        </h1>
+        <ul className="font-medium lg:text-3xl text-2xl text-white flex flex-col">
+          <li className="py-5">
+            • &nbsp; Received in Watch to Earn/
             <br />
-            Stream to Earn Rewards
+            &nbsp; &nbsp; Stream to Earn Rewards
           </li>
-          <li className="py-2">• Rewarded in trivias and quizes</li>
-          <li className="py-2">• On Stream mini games</li>
-          <li className="py-2">• Streamer Token Airdrops</li>
-          <li className="py-2">• and much more...</li>
+          <li className="py-5">• &nbsp;Rewarded in trivias and quizes</li>
+          <li className="py-5">• &nbsp; On Stream mini games</li>
+          <li className="py-5">• &nbsp; Streamer Token Airdrops</li>
+          <li className="py-5">• &nbsp; and much more...</li>
         </ul>
       </motion.div>
     </div>

@@ -1,9 +1,10 @@
 import React from "react";
-
+import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import clips from "../assets/app3.png";
 
 function Section7() {
   const { ref, inView } = useInView({
@@ -19,7 +20,7 @@ function Section7() {
         transition: {
           type: "spring",
           duration: 1,
-          bounce: 0.3,
+          bounce: 0,
         },
       });
       lAnime.start({
@@ -27,7 +28,7 @@ function Section7() {
         transition: {
           type: "spring",
           duration: 1,
-          bounce: 0.3,
+          bounce: 0,
         },
       });
     }
@@ -42,46 +43,46 @@ function Section7() {
   }, [inView]);
   return (
     <>
-      {" "}
       {/* promo 2 */}
       <div
         ref={ref}
-        className="px-5 lg:px-0 lg:py-0 bg-vid flex flex-col lg:flex-row justify-center lg:justify-evenly items-center w-screen"
+        className="bg-vid  flex lg:pt-0  flex-col lg:flex-row lg:space-x-8 lg:justify-around  justify-evenly items-center   w-screen lg:h-screen h-[120vh]"
       >
-        <div className=" flex justify-center items-center w-full lg:w-1/2 h-96">
-          <motion.div
-            animate={lAnime}
-            className="rounded-md px-4 py-5 bg-glass border-2 border-cyan-700"
-          >
-            <div className=" flex flex-col justify-center items-center text-white py-4 px-4">
-              <h1 className="pb-4 lg:pb-14 lg:text-3xl text-2xl">
-                Neemble Clips
-              </h1>
-              <p className="pb-8 text-center text-sm lg:text-lg">
-                0-120 second Horrizontal Tik-Tok Like Clips . Swipe up to see
-                next clip, discover moments of new up and coming streamers
-                <br />
-                <br />
-                Streamer meme moments, amazing highlighted plays.
-                <br />
-                <br />
-                Short, interesting, and nimble
-              </p>
-            </div>
-          </motion.div>
-        </div>
-        <motion.div animate={anime} className="w-full lg:w-2/5">
-          <div className="framer2">
-            <iframe
-              src="https://streamable.com/e/o8wyhm?autoplay=1&nocontrols=1"
-              frameborder="0"
-              width="100%"
-              height="100%"
-              allowfullscreen
-              allow="autoplay"
-              className="framer"
-            ></iframe>
-          </div>
+        {/* main red box */}
+        {/* image box */}
+
+        {/* {//50%% width} */}
+
+        {/* image box */}
+        {/* glass yellow box */}
+        {/* {//45%% width} */}
+        <motion.div
+          animate={lAnime}
+          className="px-14 flex bg-glass-purple bg-black bg-opacity-60 text-white flex-col  justify-around items-start  lg:w-2/4 w-[90%]	 h-[500px]"
+        >
+          <h1 className="flex w-full justify-center items-center lg:text-[44px] text-3xl text-center ">
+            <span>Neemble Clips</span>
+          </h1>
+          <h2 className="px-14 lg:text-[25px] text-xl  ">
+            0-120 second Horrizontal Tik-Tok Like Clips .
+            <br />
+            <br />
+            Swipe up to see next clip, discover moments of new up and coming
+            streamers
+            <br />
+            <br />
+            Streamer meme moments, amazing highlighted plays.
+            <br />
+            <br />
+            Short, interesting, and nimble
+          </h2>
+
+          <div className="flex w-full justify-evenly "></div>
+        </motion.div>
+
+        {/* image box */}
+        <motion.div animate={anime} className="lg:w-2/5 w-[85%] ">
+          <Image src={clips} />
         </motion.div>
       </div>
     </>

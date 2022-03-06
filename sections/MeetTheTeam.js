@@ -20,7 +20,7 @@ function MeetTheTeam() {
         transition: {
           type: "spring",
           duration: 1,
-          bounce: 0.3,
+          bounce: 0,
         },
       });
       lAnime.start({

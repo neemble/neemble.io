@@ -28,10 +28,10 @@ function Navbar() {
           </ul>
         </div>
         <div className="hidden lg:flex justify-center items-center space-x-6">
-          <button className="link-click text-sm  border-2 border-[#36B9FF] h-6 px-3  rounded">
+          <button className="link-click text-base  border-2 border-[#36B9FF] h-8 px-4  rounded">
             Twitter
           </button>
-          <div className="flex justify-center items-center space-x-2 border-2 border-[#00D8FA] py-1 px-3 rounded">
+          <div className="flex justify-center items-center space-x-2 border-[3px] border-[#00D8FA] py-3 px-6 rounded">
             <Image width={25} height={25} src={play}></Image>
             <button className="">Neemble Demo</button>
           </div>
@@ -89,9 +89,11 @@ function Navbar() {
                 Twitter
               </button>
             </li>
-            <button className="text-lg link border-2 border-cyan-400  py-1 px-3 rounded">
-              Neemble Demo
-            </button>
+            <div>
+              <button className="text-lg link border-2  border-[#00D8FA]  py-1 px-3 rounded">
+                Neemble Demo
+              </button>
+            </div>
           </ul>
         </div>
       ) : null}

@@ -18,7 +18,7 @@ function NMBL() {
         transition: {
           type: "spring",
           duration: 1,
-          bounce: 0.3,
+          bounce: 0,
         },
       });
     }
@@ -33,7 +33,7 @@ function NMBL() {
       ref={ref}
       className="flex justify-center items-center w-screen  bg-royal"
     >
-      <motion.div animate={anime} className="w-[450px] lg:w-[900px] h-[auto]">
+      <motion.div animate={anime} className="w-[550px] lg:w-[900px] h-[auto]">
         <Image src={chart1} placeholder="blur"></Image>
       </motion.div>
     </div>

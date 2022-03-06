@@ -1,50 +1,63 @@
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
+import play from "../assets/Play.png";
+import web1 from "../assets/mac1.png";
 function Section1() {
   return (
-    <div className="py-4 lg:py-44 bg-vid flex flex-col lg:flex-row justify-center lg:justify-evenly lg:items-start items-center w-screen">
-      <div className="flex justify-center items-center w-full lg:w-1/2 h-96">
-        <motion.div
-          initial={{ x: "-100vw" }}
-          animate={{ x: 0 }}
-          className="rounded-md px-4 lg:px-12 lg:py-5 bg-glass border-2 border-cyan-700"
-        >
-          <div className=" text-white py-14 lg:px-14">
-            <h1 className="pb-8 text-2xl">New Era Of Game Streaming is here</h1>
-            <p className="text-center text-lg">
-              The Ultimate blockchain watch to earn <br /> & stream to earn
-              platform
-            </p>
-            <div className="pt-8 flex justify-center items-center space-x-14">
-              <button className="link rounded-md border-2 border-cyan-700 px-2 py-2">
-                Explainer Video
-              </button>
-              <button className=" rounded-md border-2 border-white px-5 py-2">
-                Lightpaper
-              </button>
-            </div>
+    <div className="bg-vid flex lg:pt-0 pt-28 flex-col lg:flex-row space-x-8 lg:justify-center justify-between items-center   w-screen lg:h-screen h-[120vh]">
+      {/* main red box */}
+
+      {/* glass yellow box */}
+      {/* {//45%% width} */}
+      <motion.div
+        initial={{ x: "-100vw" }}
+        animate={{ x: 0 }}
+        transition={{
+          type: "spring",
+          duration: 1,
+          bounce: 0,
+        }}
+        className="flex rounded-md bg-glass text-white flex-col  justify-evenly items-center  lg:w-[45%] w-[90%]	 h-[500px]"
+      >
+        <h1 className="lg:text-[45px] text-3xl  text-center">
+          New Era of Game Streaming is here
+        </h1>
+        <h2 className="lg:text-[30px] text-xl text-center w-[550px]">
+          The Ultimate Blockchain Watch to Earn & Stream to Earn Platform
+        </h2>
+        <div className="flex  space-x-14 justify-center items-center">
+          <div className="border-2 rounded border-[#00D8FA] flex justify-evenly w-52 items-center">
+            <Image src={play}></Image>
+            <button className=" py-2 px-4 text-xl  ">Explainer Video</button>
           </div>
-        </motion.div>
-      </div>
+          <div>
+            <button className="rounded py-2 px-12 text-xl border-2 border-white">
+              Lightpaper
+            </button>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* glass box */}
+
+      {/* image box */}
+
+      {/* {//50%% width} */}
       <motion.div
         initial={{ x: "100vw" }}
         animate={{ x: 0 }}
-        className="py-4 lg:py-0 w-full lg:w-1/2"
+        transition={{
+          type: "spring",
+          duration: 1,
+          bounce: 0,
+        }}
+        className="lg:w-[45%] w-4/5 lg:py-0 py-14  h-[540px] "
       >
-        <div className="framer2">
-          <iframe
-            src="https://streamable.com/e/zxqtwg?autoplay=1&nocontrols=1"
-            frameborder="0"
-            width="100%"
-            height="100%"
-            allowfullscreen
-            allow="autoplay"
-            className="framer"
-          ></iframe>
-        </div>
+        <Image src={web1} />
       </motion.div>
+
+      {/* image box */}
     </div>
   );
 }
