@@ -8,7 +8,6 @@ import { Doughnut } from "react-chartjs-2";
 import ChartData from "../components/ChartData";
 import { Chart } from "chart.js";
 
-Chart.register(Doughnut);
 function NMBL({ menuRef }) {
   const { ref, inView } = useInView({
     threshold: 0.2,
