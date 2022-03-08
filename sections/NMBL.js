@@ -1,12 +1,12 @@
 import React from "react";
-import "chart.js/auto";
+import Chart from "chart.js/auto";
+
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Doughnut } from "react-chartjs-2";
 import ChartData from "../components/ChartData";
-import { Chart } from "chart.js";
 
 function NMBL({ menuRef }) {
   const { ref, inView } = useInView({
