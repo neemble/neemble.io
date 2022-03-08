@@ -6,8 +6,9 @@ import { useAnimation } from "framer-motion";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import complete from "../assets/check.png";
+import laptop from "../assets/laptop.png";
 
-function Roadmap() {
+function Roadmap({ menuRef }) {
   const { ref, inView } = useInView({
     threshold: 0.2,
   });
@@ -44,7 +45,7 @@ function Roadmap() {
     }
     if (!inView) {
       anime.start({
-        x: "100vw",
+        x: "-100vw",
       });
       cAnime.start({ y: "-15vw", opacity: 0 });
       lAnime.start({
@@ -53,9 +54,10 @@ function Roadmap() {
     }
   }, [inView]);
   return (
-    <>
+    <div ref={menuRef}>
       {/* ROADMAP */}
       <div
+        id="roadmap"
         ref={ref}
         className="flex py-14 justify-center items-center w-screen bg-[#2d0045] "
       >
@@ -68,15 +70,15 @@ function Roadmap() {
 
               <motion.div
                 animate={lAnime}
-                className="px-4 border-4 border-[#9600e7] flex justify-evenly flex-col items-center rounded-2xl bg-[#4c0178] w-[440px] h-[600px] "
+                className="px-4 border-4 border-[#9600e7] flex justify-evenly flex-col items-center rounded-2xl bg-[#4b0177] w-[340px] h-[450px] md:w-[440px] md:h-[600px] "
               >
-                <div className="flex justify-center items-center space-x-2">
+                <div className="flex justify-center items-center space-x-8">
                   <Image width={40} height={40} src={complete} />
-                  <h1 className="py-4 text-4xl text-white font-semibold">
+                  <h1 className="py-4 md:text-4xl text-xl text-white font-semibold">
                     Tasks Complete
                   </h1>
                 </div>
-                <ul className="px-4 py-5 text-xl font-semibold text-white flex flex-col">
+                <ul className="px-4 py-5 md:text-xl text-sm font-semibold text-white flex flex-col">
                   <li className="py-2">• Neemble Desktop and Web UX/UI</li>
                   <li className="py-2">• Neemble mobile app UX/UI</li>
                   <li className="py-2">• ULTRA-HD Streaming algorithm</li>
@@ -94,15 +96,15 @@ function Roadmap() {
               </motion.div>
               <motion.div
                 animate={cAnime}
-                className="px-4 border-4 border-[#9600e7] flex justify-evenly flex-col items-center rounded-2xl bg-[#4c0178]   w-[440px] h-[600px]"
+                className="px-4 border-4 border-[#9600e7] flex justify-evenly flex-col items-center rounded-2xl bg-[#4b0177]  w-[340px] h-[450px] md:w-[440px] md:h-[600px]"
               >
-                <div className="flex justify-center items-center space-x-2">
+                <div className="flex justify-center items-center space-x-8">
                   <Image width={40} height={40} src={complete} />
-                  <h1 className="py-4 text-4xl text-white font-semibold">
+                  <h1 className="py-4 md:text-4xl text-xl text-white font-semibold">
                     Tasks Complete
                   </h1>
                 </div>
-                <ul className="px-4 text-xl font-semibold text-white flex flex-col">
+                <ul className="px-4 md:text-xl text-sm font-semibold text-white flex flex-col">
                   <li className="py-1">• Develop and deploy the website</li>
                   <li className="py-1">• Interactive demos are live now</li>
                   <li className="py-1">• Publish the light paper</li>
@@ -122,12 +124,15 @@ function Roadmap() {
               </motion.div>
               <motion.div
                 animate={anime}
-                className="px-4 border-4 border-[#9600e7] flex justify-evenly flex-col items-center rounded-xl bg-[#4c0178] w-[440px] h-[600px]"
+                className="px-4 border-4 border-[#9600e7] flex justify-evenly flex-col items-center rounded-xl bg-[#4b0177] w-[340px] h-[450px] md:w-[440px] md:h-[600px]"
               >
-                <h1 className="py-4 text-4xl text-white font-semibold">
-                  💻 Tasks in process
-                </h1>
-                <ul className="px-4 py-1 text-xl  font-semibold text-white flex flex-col">
+                <div className="flex justify-center items-center space-x-8">
+                  <Image width={40} height={40} src={laptop} />
+                  <h1 className="py-4 md:text-4xl text-xl text-white font-semibold">
+                    Tasks in progress
+                  </h1>
+                </div>
+                <ul className="px-4 py-1 md:text-xl text-sm font-semibold text-white flex flex-col">
                   <li className="py-2">
                     • Run a small private crowdsale for 1111 true believers, to
                     be able to be the first ever to buy a limited amount of NMBL
@@ -156,7 +161,7 @@ function Roadmap() {
       </div>
 
       {/* ROADMAP */}
-    </>
+    </div>
   );
 }
 

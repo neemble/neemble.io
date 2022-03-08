@@ -3,9 +3,9 @@ import Image from "next/image";
 
 function Team({ tImage, tName, tTitle, tBio }) {
   return (
-    <div className="team rounded-xl h-44 w-96 flex justify-center items-center ">
+    <div className="team rounded-xl md:h-44 md:w-96 h-44 w-80 flex justify-center items-center ">
       <div className="w-2/5">
-        <Image width={140} height={140} src={tImage} placeholder="blur" />
+        <Image width={120} height={120} src={tImage} placeholder="blur" />
       </div>
       <div className="w-3/5 ">
         <h1 className="text-white text-2xl">{tName}</h1>

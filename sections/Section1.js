@@ -3,36 +3,38 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import play from "../assets/Play.png";
 import web1 from "../assets/mac1.png";
-function Section1() {
+function Section1({ menuRef }) {
   return (
-    <div className="bg-vid flex lg:pt-0 pt-28 flex-col lg:flex-row space-x-8 lg:justify-center justify-between items-center   w-screen lg:h-screen h-[120vh]">
-      {/* main red box */}
-
-      {/* glass yellow box */}
-      {/* {//45%% width} */}
+    <div
+      ref={menuRef}
+      id="home"
+      className=" bg-vid flex lg:pt-0 pt-28 flex-col lg:flex-row lg:space-x-8 lg:justify-evenly justify-between items-center   w-screen lg:h-screen h-[120vh]"
+    >
       <motion.div
-        initial={{ x: "-100vw" }}
+        initial={{ x: "-90vw" }}
         animate={{ x: 0 }}
         transition={{
           type: "spring",
           duration: 1,
           bounce: 0,
         }}
-        className="flex rounded-md bg-glass text-white flex-col  justify-evenly items-center  lg:w-[45%] w-[90%]	 h-[500px]"
+        className="flex rounded-md bg-glass text-white flex-col  justify-evenly items-center  lg:w-[45%] w-[90%]	 h-[450px]"
       >
-        <h1 className="lg:text-[45px] text-3xl  text-center">
+        <h1 className="lg:text-[45px] md:text-3xl text-xl text-center">
           New Era of Game Streaming is here
         </h1>
-        <h2 className="lg:text-[30px] text-xl text-center w-[550px]">
+        <h2 className="lg:text-[30px] md:text-xl text-sm text-center md:w-[550px]">
           The Ultimate Blockchain Watch to Earn & Stream to Earn Platform
         </h2>
-        <div className="flex  space-x-14 justify-center items-center">
-          <div className="border-2 rounded border-[#00D8FA] flex justify-evenly w-52 items-center">
+        <div className="flex md:space-x-14 space-x-4 justify-center items-center">
+          <div className="border-2 rounded border-[#00D8FA] flex justify-evenly md:w-62 items-center">
             <Image src={play}></Image>
-            <button className=" py-2 px-4 text-xl  ">Explainer Video</button>
+            <button className=" py-2 lg:px-5 px-4 md:text-2xl text-sm  ">
+              Explainer Video
+            </button>
           </div>
           <div>
-            <button className="rounded py-2 px-12 text-xl border-2 border-white">
+            <button className="rounded py-2 md:px-12 px-4 md:text-2xl text-sm border-2 border-white">
               Lightpaper
             </button>
           </div>
@@ -45,14 +47,14 @@ function Section1() {
 
       {/* {//50%% width} */}
       <motion.div
-        initial={{ x: "100vw" }}
+        initial={{ x: "-20vw" }}
         animate={{ x: 0 }}
         transition={{
           type: "spring",
           duration: 1,
           bounce: 0,
         }}
-        className="lg:w-[45%] w-4/5 lg:py-0 py-14  h-[540px] "
+        className="lg:w-[40%] w-4/5 lg:py-0 py-14  h-[540px] "
       >
         <Image src={web1} />
       </motion.div>

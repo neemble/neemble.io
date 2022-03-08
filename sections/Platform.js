@@ -8,7 +8,7 @@ import { useAnimation } from "framer-motion";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 
-function Platform() {
+function Platform({ menuRef }) {
   const { ref, inView } = useInView({
     threshold: 0.2,
   });
@@ -30,7 +30,7 @@ function Platform() {
         x: 0,
         transition: {
           type: "spring",
-          duration: 1,
+          duration: 2,
           bounce: 0,
         },
       });
@@ -46,35 +46,36 @@ function Platform() {
     }
   }, [inView]);
   return (
-    <>
+    <div ref={menuRef}>
       <div
+        id="streamer"
         ref={ref}
         className=" pb-40 w-screen bg-royal flex flex-col items-center justify-center"
       >
-        <div className="flex space-x-10 lg:space-x-40">
+        <div className="flex space-x-4 lg:space-x-40">
           <motion.div
             animate={anime}
-            className="w-[250px] md:w-[300px] lg:w-[400px]  h-[auto] hover:border-2 hover:rounded-md cursor-pointer"
+            className="w-[160px] md:w-[300px] lg:w-[400px]  h-[auto] hover:border-2 hover:rounded-md cursor-pointer"
           >
             <Image src={p1} placeholder="blur" />
           </motion.div>
           <motion.div
             animate={anime}
-            className=" w-[250px] md:w-[300px] lg:w-[400px] h-[auto] hover:border-2 hover:rounded-md cursor-pointer"
+            className=" w-[160px] md:w-[300px] lg:w-[400px] h-[auto] hover:border-2 hover:rounded-md cursor-pointer"
           >
             <Image src={p2} placeholder="blur" />
           </motion.div>
         </div>
-        <div className="mt-14">
+        <div className="mt-4 md:mt-14">
           <motion.div
             animate={lAnime}
-            className="w-[550px] md:w-[700px] lg:w-[965px] h-[auto]  hover:border-2 hover:rounded-md cursor-pointer"
+            className="w-[350px] md:w-[700px] lg:w-[965px] h-[auto]  hover:border-2 hover:rounded-md cursor-pointer"
           >
             <Image src={p3} placeholder="blur" />
           </motion.div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

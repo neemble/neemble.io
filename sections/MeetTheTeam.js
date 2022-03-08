@@ -8,7 +8,7 @@ import { useAnimation } from "framer-motion";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 
-function MeetTheTeam() {
+function MeetTheTeam({ menuRef }) {
   const { ref, inView } = useInView({
     threshold: 0.2,
   });
@@ -36,7 +36,7 @@ function MeetTheTeam() {
     }
     if (!inView) {
       anime.start({
-        x: "100vw",
+        x: "-100vw",
       });
       lAnime.start({
         x: "-100vw",
@@ -51,14 +51,18 @@ function MeetTheTeam() {
         className="flex flex-col py-16 justify-center items-center w-screen bg-[#0d1733] "
       >
         {/* tab */}
-        <div className="flex justify-center items-center w-screen bg-royal">
+        <div
+          id="team"
+          ref={menuRef}
+          className="flex justify-center items-center w-screen bg-royal"
+        >
           <h1 className="text-white font-semibold text-5xl">Meet The Team</h1>
         </div>
         {/* tab */}
 
         <motion.div
           animate={anime}
-          className="py-14 grid grid-cols-1 lg:grid-cols-3 gap-14"
+          className="py-14 grid grid-cols-1 lg:grid-cols-4 gap-10"
         >
           {DATA.map((team) => (
             <Team

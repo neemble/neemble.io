@@ -5,46 +5,47 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import teams from "../assets/teams.png";
 import Image from "next/image";
-function Section5() {
+function Section5({ menuRef }) {
   const { ref, inView } = useInView({
     threshold: 0.2,
   });
-  const anime = useAnimation();
-  const lAnime = useAnimation();
+  const effect1 = useAnimation();
+  const effect2 = useAnimation();
 
   useEffect(() => {
     if (inView) {
-      anime.start({
+      effect1.start({
         x: 0,
         transition: {
           type: "spring",
-          duration: 1,
+          duration: 2,
           bounce: 0,
         },
       });
-      lAnime.start({
+      effect2.start({
         x: 0,
         transition: {
           type: "spring",
-          duration: 1,
+          duration: 2,
           bounce: 0,
         },
       });
     }
     if (!inView) {
-      anime.start({
-        x: "100vw",
-      });
-      lAnime.start({
+      effect1.start({
         x: "-100vw",
+      });
+      effect2.start({
+        x: "-50vw",
       });
     }
   }, [inView]);
   return (
-    <>
+    <div ref={menuRef}>
       <div
+        id="home"
         ref={ref}
-        className="bg-vid  flex lg:pt-0 flex-col lg:flex-row lg:space-x-8  lg:justify-around  justify-evenly items-center   w-screen lg:h-screen h-[140vh]"
+        className="bg-vid  flex lg:pt-0 flex-col lg:flex-row lg:space-x-8  lg:justify-around  justify-evenly items-center   w-screen lg:h-screen h-[160vh]"
       >
         {/* main red box */}
         {/* image box */}
@@ -55,11 +56,13 @@ function Section5() {
         {/* glass yellow box */}
         {/* {//45%% width} */}
         <motion.div
-          animate={lAnime}
+          animate={effect1}
           className="px-14 flex bg-glass-purple bg-black bg-opacity-60 text-white flex-col  justify-evenly items-start  lg:w-2/4 w-[90%]	 h-[681px]"
         >
-          <h1 className="lg:text-[45px] text-3xl ">Introducing Team Streams</h1>
-          <h2 className="lg:text-[25px] text-xl -mt-8 ">
+          <h1 className="lg:text-[45px] md:text-3xl text-xl ">
+            Introducing Team Streams
+          </h1>
+          <h2 className="lg:text-[25px] md:text-xl text-sm -mt-8 ">
             This has never been done. Even though most streamed games are
             team-games and teams can have multiple streamers.
             <br />
@@ -79,11 +82,11 @@ function Section5() {
         </motion.div>
 
         {/* image box */}
-        <motion.div animate={anime} className="lg:w-2/5 w-[85%] ">
+        <motion.div animate={effect2} className="lg:w-2/5 w-[85%] ">
           <Image src={teams} />
         </motion.div>
       </div>
-    </>
+    </div>
   );
 }
 

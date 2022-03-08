@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import promo1 from "../assets/app1.png";
+import twin from "../assets/twins.png";
 import apple from "../assets/appStore.png";
 import google from "../assets/googlePlay.png";
 import { useInView } from "react-intersection-observer";
@@ -8,68 +8,69 @@ import { useAnimation } from "framer-motion";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 
-function Section6() {
+function Section6({ menuRef }) {
   const { ref, inView } = useInView({
     threshold: 0.2,
   });
-  const anime = useAnimation();
-  const lAnime = useAnimation();
+  const effect1 = useAnimation();
+  const effect2 = useAnimation();
 
   useEffect(() => {
     if (inView) {
-      anime.start({
+      effect1.start({
         x: 0,
         transition: {
           type: "spring",
-          duration: 1,
+          duration: 2,
           bounce: 0,
         },
       });
-      lAnime.start({
+      effect2.start({
         x: 0,
         transition: {
           type: "spring",
-          duration: 1,
+          duration: 2,
           bounce: 0,
         },
       });
     }
     if (!inView) {
-      anime.start({
-        x: "100vw",
-      });
-      lAnime.start({
+      effect1.start({
         x: "-100vw",
+      });
+      effect2.start({
+        x: "-50vw",
       });
     }
   }, [inView]);
   return (
-    <>
+    <div ref={menuRef}>
       {/* promo 1  */}
 
       <div
+        id="home"
         ref={ref}
-        className="bg-vid  flex lg:pt-0 flex-col lg:flex-row lg:space-x-8 lg:justify-around  justify-evenly items-center   w-screen lg:h-screen h-[120vh]"
+        className="bg-vid  flex lg:pt-0 pt-14 flex-col lg:flex-row lg:space-x-8 lg:justify-around  justify-evenly items-center   w-screen lg:h-screen h-[120vh]"
       >
         {/* main red box */}
         {/* image box */}
 
         {/* {//50%% width} */}
-        <motion.div animate={lAnime} className="lg:w-2/5 w-[85%] ">
-          <Image src={promo1} />
+        <motion.div animate={effect1} className="lg:w-2/5 w-[85%] ">
+          <Image src={twin} />
         </motion.div>
 
         {/* image box */}
         {/* glass yellow box */}
         {/* {//45%% width} */}
         <motion.div
-          animate={anime}
+          animate={effect2}
           className="px-14 flex bg-glass-purple bg-black bg-opacity-60 text-white flex-col  justify-evenly items-start  lg:w-2/4 w-[90%]	 h-[600px]"
         >
-          <h1 className="lg:text-[44px] text-3xl ">
+          <h1 className="lg:text-[44px] md:text-3xl text-xl ">
             IOS and Android Mobile Apps
           </h1>
-          <h2 className="lg:text-[25px] text-xl  ">
+          <h2 className="lg:text-[25px] md:text-xl  text-sm ">
             Neemble is a PC and Mobile first platform
             <br />
             <br />
@@ -88,7 +89,7 @@ function Section6() {
 
         {/* glass box */}
       </div>
-    </>
+    </div>
   );
 }
 

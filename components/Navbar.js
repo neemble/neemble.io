@@ -3,7 +3,7 @@ import logo from "../assets/neemble-logo.png";
 import Image from "next/image";
 import play from "../assets/Play.png";
 
-function Navbar() {
+function Navbar({ navColor, navBtn, menu1, menu2, menu3, menu4, menu5 }) {
   const [menu, setMenu] = useState(false);
 
   const hamburger = () => {
@@ -11,19 +11,44 @@ function Navbar() {
   };
   return (
     <>
-      <div className="bg-glass-high fixed z-50 border-b-2 border-b-[#00D8FA]  text-white navbar px-6 flex justify-between items-center w-screen h-20">
+      <div
+        className={`bg-glass-high fixed z-50 border-b-2 ${navColor} text-white navbar px-6 flex justify-between items-center w-screen h-20`}
+      >
         <div>
           <ul className="hidden cursor-pointer lg:flex items-center space-x-9">
             <li className="w-14 h-auto">
               <Image src={logo} />
             </li>
-            <li className="text-xl link border-2 border-[#00D8FA] rounded-[7px] px-3 py-1">
+            <li
+              onClick={() => window.location.replace("/#home")}
+              className={`text-xl ${menu1}`}
+            >
               Neemble
             </li>
-            <li className="text-xl">Streamer Token</li>
-            <li className="text-xl">Tekenomics</li>
-            <li className="text-xl">Road Map</li>
-            <li className="text-xl">Team</li>
+            <li
+              onClick={() => window.location.replace("/#streamer")}
+              className={`text-xl ${menu2}`}
+            >
+              Streamer Token
+            </li>
+            <li
+              onClick={() => window.location.replace("/#tekenomics")}
+              className={`text-xl ${menu3}`}
+            >
+              Tekenomics
+            </li>
+            <li
+              onClick={() => window.location.replace("/#roadmap")}
+              className={`text-xl ${menu4}`}
+            >
+              Road Map
+            </li>
+            <li
+              onClick={() => window.location.replace("/#team")}
+              className={`text-xl ${menu5}`}
+            >
+              Team
+            </li>
             <li className="text-xl">Social</li>
           </ul>
         </div>
@@ -31,7 +56,9 @@ function Navbar() {
           <button className="link-click text-base  border-2 border-[#36B9FF] h-8 px-4  rounded">
             Twitter
           </button>
-          <div className="flex justify-center items-center space-x-2 border-[3px] border-[#00D8FA] py-3 px-6 rounded">
+          <div
+            className={`flex justify-center items-center space-x-2 border-[3px] ${navBtn} py-3 px-6 rounded`}
+          >
             <Image width={25} height={25} src={play}></Image>
             <button className="">Neemble Demo</button>
           </div>
@@ -102,3 +129,7 @@ function Navbar() {
 }
 
 export default Navbar;
+
+{
+  /* <div onClick={() => window.location.replace("/#about")}> */
+}
