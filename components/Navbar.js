@@ -53,7 +53,11 @@ function Navbar({ navColor, navBtn, menu1, menu2, menu3, menu4, menu5 }) {
           </ul>
         </div>
         <div className="hidden lg:flex justify-center items-center space-x-6">
-          <a href="https://twitter.com/neemble" target="_blank">
+          <a
+            href="https://twitter.com/neemble"
+            target="_blank"
+            rel="noreferrer"
+          >
             <button className="link-click text-base  border-2 border-[#36B9FF] h-8 px-4  rounded">
               Twitter
             </button>
@@ -129,7 +133,11 @@ function Navbar({ navColor, navBtn, menu1, menu2, menu3, menu4, menu5 }) {
               Social
             </li>
             <li className="py-4">
-              <a href="https://twitter.com/neemble" target="_blank">
+              <a
+                href="https://twitter.com/neemble"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <button className=" text-sm  border-2 border-blue-500 py-1 px-2 rounded">
                   Twitter
                 </button>
