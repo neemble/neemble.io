@@ -47,7 +47,7 @@ function Section2({ menuRef }) {
       <div
         id="home"
         ref={ref}
-        className="bg-vid   flex lg:pt-0 pt-14 flex-col lg:flex-row lg:space-x-8 lg:justify-around  justify-evenly items-center   w-screen lg:h-screen h-[160vh]"
+        className="bg-vid   flex lg:pt-0 pt-14 flex-col lg:flex-row lg:space-x-8 lg:justify-around  justify-evenly items-center   w-screen lg:h-screen h-[110vh]"
       >
         {/* main red box */}
         {/* image box */}

@@ -8,7 +8,7 @@ function Section1({ menuRef }) {
     <div
       ref={menuRef}
       id="home"
-      className="bg-vid flex lg:pt-0 pt-28 flex-col-reverse lg:flex-row lg:space-x-8 lg:justify-evenly justify-between items-center   w-screen lg:h-screen h-[150vh]"
+      className="bg-vid flex lg:pt-0 pt-28 flex-col-reverse lg:flex-row lg:space-x-8 lg:justify-evenly justify-between items-center   w-screen lg:h-screen h-[100vh]"
     >
       <motion.div
         initial={{ x: "-90vw" }}

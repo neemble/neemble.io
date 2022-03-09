@@ -47,7 +47,7 @@ function Section4({ menuRef }) {
       <div
         id="streamer"
         ref={ref}
-        className="bg-vid flex flex-col lg:flex-row lg:space-x-8 lg:justify-around  justify-evenly items-center   w-screen lg:h-screen h-[190vh]"
+        className="bg-vid flex flex-col lg:flex-row lg:space-x-8 lg:justify-around  justify-evenly items-center   w-screen lg:h-screen h-[140vh]"
       >
         {/* main red box */}
         {/* image box */}

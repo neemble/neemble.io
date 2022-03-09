@@ -83,7 +83,7 @@ function NMBL({ menuRef }) {
       <div
         id="tekenomics"
         ref={ref}
-        className=" lg:pt-0 pt-20 md:pt-20 flex items-center lg:flex-row flex-col justify-evenly lg:h-[100vh] h-[160vh] w-screen bg-royal"
+        className="bg-royal lg:pt-0 pt-0 md:pt-20 flex items-center lg:flex-row flex-col justify-evenly lg:h-[100vh] h-[130vh] w-screen"
       >
         <div className="lg:py-8 flex justify-center items-center lg:items-end w-[80%] lg:w-[50%] h-full ">
           <div className="w-[250px] h-[250px] md:w-[500px] md:h-[500px] lg:w-[647px] lg:h-[647px]">

@@ -151,7 +151,7 @@ export default function Home() {
 
       <NMBL menuRef={nmblRef} />
 
-      <div className="lg:pt-44  flex justify-center items-center w-screen bg-royal">
+      <div className="lg:pt-44 flex justify-center items-center w-screen bg-royal">
         <h1 className="text-white font-semibold text-2xl md:text-3xl lg:text-5xl">
           Streamer Token Tokenomics
         </h1>

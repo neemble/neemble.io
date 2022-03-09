@@ -6,7 +6,6 @@ import { useAnimation } from "framer-motion";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Doughnut } from "react-chartjs-2";
-import ChartData from "../components/ChartData";
 
 function NMBL({ menuRef }) {
   const { ref, inView } = useInView({
@@ -64,7 +63,7 @@ function NMBL({ menuRef }) {
       <div
         id="tekenomics"
         ref={ref}
-        className="bg-royal lg:pt-0 pt-20 md:pt-20 flex items-center lg:flex-row flex-col-reverse  justify-evenly lg:h-[90vh] h-[120vh] w-screen"
+        className="bg-royal lg:pt-0 pt-20 md:pt-20 flex items-center lg:flex-row flex-col-reverse  justify-evenly lg:h-[90vh] h-[90vh] w-screen"
       >
         {/* data */}
         <motion.div
@@ -134,7 +133,7 @@ function NMBL({ menuRef }) {
             {/* line div endd */}
           </div>
         </motion.div>
-        <div className="lg:-mt-0 lg:py-8 flex justify-center items-center lg:items-end w-[80%] lg:w-[50%] h-full ">
+        <div className=" lg:py-8 flex justify-center items-center lg:items-end w-[80%] lg:w-[50%] h-full ">
           <div className="w-[250px] h-[250px] md:w-[500px] md:h-[500px] lg:w-[587px] lg:h-[587px]">
             <Doughnut data={data} options={options} />
           </div>
