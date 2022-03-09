@@ -50,7 +50,7 @@ function Section6({ menuRef }) {
       <div
         id="home"
         ref={ref}
-        className="bg-vid  flex lg:pt-0 pt-14 flex-col lg:flex-row lg:space-x-8 lg:justify-around  justify-evenly items-center   w-screen lg:h-screen h-[120vh]"
+        className="bg-vid  flex lg:pt-0 pt-14 flex-col lg:flex-row lg:space-x-8 lg:justify-around  justify-evenly items-center   w-screen lg:h-screen h-[150vh]"
       >
         {/* main red box */}
         {/* image box */}
@@ -65,7 +65,7 @@ function Section6({ menuRef }) {
         {/* {//45%% width} */}
         <motion.div
           animate={effect2}
-          className="px-14 flex bg-glass-purple bg-black bg-opacity-60 text-white flex-col  justify-evenly items-start  lg:w-2/4 w-[90%]	 h-[600px]"
+          className="lg:px-14 px-4 flex bg-glass-purple bg-black bg-opacity-60 text-white flex-col  justify-evenly items-start  lg:w-2/4 w-[90%] h-[400px] lg:h-[600px]"
         >
           <h1 className="lg:text-[44px] md:text-3xl text-xl ">
             IOS and Android Mobile Apps
@@ -81,9 +81,13 @@ function Section6({ menuRef }) {
             Mobile streaming platform will be released with Neemble Beta release
           </h2>
 
-          <div className="flex w-full justify-evenly ">
-            <Image src={google} />
-            <Image src={apple} />
+          <div className=" flex w-full justify-evenly ">
+            <div className="lg:w-[238px] w-36">
+              <Image src={google} />
+            </div>
+            <div className="lg:w-[238px] w-32">
+              <Image src={apple} />
+            </div>
           </div>
         </motion.div>
 

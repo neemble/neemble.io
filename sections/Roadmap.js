@@ -1,5 +1,5 @@
 import React from "react";
-import rFoot from "../assets/roadmapline.png";
+import rFoot from "../assets/roadmapline2.png";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
@@ -78,7 +78,7 @@ function Roadmap({ menuRef }) {
                     Tasks Complete
                   </h1>
                 </div>
-                <ul className="px-4 py-5 md:text-xl text-sm font-semibold text-white flex flex-col">
+                <ul className="px-4 py-5 md:text-xl text-sm  text-white flex flex-col">
                   <li className="py-2">• Neemble Desktop and Web UX/UI</li>
                   <li className="py-2">• Neemble mobile app UX/UI</li>
                   <li className="py-2">• ULTRA-HD Streaming algorithm</li>
@@ -104,7 +104,7 @@ function Roadmap({ menuRef }) {
                     Tasks Complete
                   </h1>
                 </div>
-                <ul className="px-4 md:text-xl text-sm font-semibold text-white flex flex-col">
+                <ul className="px-4 md:text-xl text-sm  text-white flex flex-col">
                   <li className="py-1">• Develop and deploy the website</li>
                   <li className="py-1">• Interactive demos are live now</li>
                   <li className="py-1">• Publish the light paper</li>
@@ -132,7 +132,7 @@ function Roadmap({ menuRef }) {
                     Tasks in progress
                   </h1>
                 </div>
-                <ul className="px-4 py-1 md:text-xl text-sm font-semibold text-white flex flex-col">
+                <ul className="px-4 py-1 md:text-xl text-sm  text-white flex flex-col">
                   <li className="py-2">
                     • Run a small private crowdsale for 1111 true believers, to
                     be able to be the first ever to buy a limited amount of NMBL

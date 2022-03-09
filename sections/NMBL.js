@@ -45,7 +45,7 @@ function NMBL({ menuRef }) {
     ],
     datasets: [
       {
-        data: [11, 10, 6, 5, 3, 3, 2, 60],
+        data: ["11", "10", " 6", " 5", " 3", " 3", " 2", "60"],
 
         backgroundColor: [
           "#a17900",
@@ -85,7 +85,7 @@ function NMBL({ menuRef }) {
         ref={ref}
         className=" lg:pt-0 pt-20 md:pt-20 flex items-center lg:flex-row flex-col justify-evenly lg:h-[100vh] h-[160vh] w-screen bg-royal"
       >
-        <div className="flex justify-center items-center w-[80%] lg:w-[50%] h-full ">
+        <div className="lg:py-8 flex justify-center items-center lg:items-end w-[80%] lg:w-[50%] h-full ">
           <div className="w-[250px] h-[250px] md:w-[500px] md:h-[500px] lg:w-[647px] lg:h-[647px]">
             <Doughnut data={data} options={options} />
           </div>
@@ -94,7 +94,7 @@ function NMBL({ menuRef }) {
         {/* data */}
         <motion.div
           animate={anime}
-          className=" flex pt-14 flex-col w-[80%] lg:w-[50%] h-full "
+          className=" lg:justify-center flex pt-14 flex-col w-[80%] lg:w-[50%] h-full "
         >
           <div className="justify-center flex space-x-10 items-center">
             <div className="rounded-xl flex flex-col justify-evenly items-center text-white h-[80px] md:h-[132px] border-2 nav-blue border-[#00D8FA] w-[150px] md:w-[293px] ">

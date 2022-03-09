@@ -44,22 +44,18 @@ function MeetTheTeam({ menuRef }) {
     }
   }, [inView]);
   return (
-    <>
+    <div>
       {/* Meet the Team */}
       <div
         ref={ref}
         className="flex flex-col py-16 justify-center items-center w-screen bg-[#0d1733] "
       >
         {/* tab */}
-        <div
-          id="team"
-          ref={menuRef}
-          className="flex justify-center items-center w-screen bg-royal"
-        >
+        <div className="flex justify-center items-center w-screen bg-royal">
           <h1 className="text-white font-semibold text-5xl">Meet The Team</h1>
         </div>
         {/* tab */}
-
+        <div id="team" ref={menuRef}></div>
         <motion.div
           animate={anime}
           className="py-14 grid grid-cols-1 lg:grid-cols-4 gap-10"
@@ -75,7 +71,7 @@ function MeetTheTeam({ menuRef }) {
         </motion.div>
       </div>
       {/* team */}
-    </>
+    </div>
   );
 }
 

@@ -47,7 +47,7 @@ function Section4({ menuRef }) {
       <div
         id="streamer"
         ref={ref}
-        className="bg-vid  flex lg:pt-0  flex-col lg:flex-row lg:space-x-8 lg:justify-around  justify-evenly items-center   w-screen lg:h-screen h-[160vh]"
+        className="bg-vid flex flex-col lg:flex-row lg:space-x-8 lg:justify-around  justify-evenly items-center   w-screen lg:h-screen h-[190vh]"
       >
         {/* main red box */}
         {/* image box */}
@@ -62,12 +62,12 @@ function Section4({ menuRef }) {
         {/* {//45%% width} */}
         <motion.div
           animate={effect2}
-          className="px-14 flex rounded-lg bg-glass text-white flex-col  justify-evenly items-start  lg:w-2/4 w-[90%]	 h-[614px]"
+          className="px-10 lg:px-14 flex rounded-lg bg-glass text-white flex-col  justify-evenly items-start  lg:w-2/4 w-[90%]	 h-[614px]"
         >
-          <h1 className="lg:text-[40px] md:text-3xl text-xl ">
+          <h1 className=" lg:w-full w-[300px] lg:text-[40px] md:text-3xl text-2xl ">
             Introducing NFT Subscription Passes
           </h1>
-          <h2 className="lg:text-[20px] md:text-xl text-sm">
+          <h2 className="lg:text-[20px] md:text-xl text-sm w-64 lg:w-full">
             NFT-Passes will let holders be elligible for: small and big streamer
             token airdrops, NMBL token airdrops, NFT pass staking, streamer
             token staking, white-list spots to private streamer token sales,
@@ -82,10 +82,7 @@ function Section4({ menuRef }) {
             turn every streamer into a free-to-watch, netflix-like subscription.
           </h2>
 
-          <button
-            className="rounded-md py-2 px-8 lg:text-xl md:text-lg text-sm
-           border-2 border-white"
-          >
+          <button className="lg:w-[30vw] w-[75vw] rounded py-2 px-4 lg:text-lg md:text-sm text-xs border-2 border-white">
             Litepaper link: NFT Pass Subscription Model
           </button>
         </motion.div>

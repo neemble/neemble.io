@@ -8,7 +8,7 @@ function Section1({ menuRef }) {
     <div
       ref={menuRef}
       id="home"
-      className="bg-vid flex lg:pt-0 pt-28 flex-col lg:flex-row lg:space-x-8 lg:justify-evenly justify-between items-center   w-screen lg:h-screen h-[120vh]"
+      className="bg-vid flex lg:pt-0 pt-28 flex-col-reverse lg:flex-row lg:space-x-8 lg:justify-evenly justify-between items-center   w-screen lg:h-screen h-[150vh]"
     >
       <motion.div
         initial={{ x: "-90vw" }}
@@ -20,21 +20,21 @@ function Section1({ menuRef }) {
         }}
         className="flex rounded-md bg-glass text-white flex-col  justify-evenly items-center  lg:w-[45%] w-[90%]	 h-[450px]"
       >
-        <h1 className="lg:text-[45px] md:text-3xl text-xl text-center">
+        <h1 className="lg:text-[45px] md:text-3xl text-xl text-center lg:w-full w-44">
           New Era of Game Streaming is here
         </h1>
-        <h2 className="lg:text-[30px] md:text-xl text-sm text-center md:w-[550px]">
+        <h2 className="lg:text-[30px] md:text-xl text-sm text-center md:w-[550px] w-56">
           The Ultimate Blockchain Watch to Earn & Stream to Earn Platform
         </h2>
-        <div className="flex md:space-x-14 space-x-4 justify-center items-center">
-          <div className="border-2 rounded border-[#00D8FA] flex justify-evenly md:w-62 items-center">
+        <div className="flex lg:flex-row flex-col lg:space-x-14  justify-center items-center">
+          <div className="md:border-2 border rounded border-[#00D8FA] flex justify-evenly md:w-62 items-center">
             <Image src={play}></Image>
             <button className=" py-2 lg:px-5 px-4 md:text-2xl text-sm  ">
               Explainer Video
             </button>
           </div>
-          <div>
-            <button className="rounded py-2 md:px-12 px-4 md:text-2xl text-sm border-2 border-white">
+          <div className="lg:py-0 py-4">
+            <button className="rounded py-2 md:px-12 px-[45px] md:text-2xl text-sm md:border-2 border border-white">
               Lightpaper
             </button>
           </div>

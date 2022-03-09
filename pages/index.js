@@ -91,6 +91,8 @@ export default function Home() {
       setStreamer(
         " border-2 border-[#905FA8] nav-purple rounded-[7px] px-3 py-1"
       );
+      setNav("border-b-[#905FA8] nav-purple");
+      setBtn("border-[#905FA8]");
       setNeemble("");
       setTekenomics("");
       setRoadmap("");
@@ -149,8 +151,8 @@ export default function Home() {
 
       <NMBL menuRef={nmblRef} />
 
-      <div className="flex justify-center items-center w-screen bg-royal">
-        <h1 className="text-white font-semibold text-xl md:text-3xl lg:text-5xl">
+      <div className="lg:pt-44  flex justify-center items-center w-screen bg-royal">
+        <h1 className="text-white font-semibold text-2xl md:text-3xl lg:text-5xl">
           Streamer Token Tokenomics
         </h1>
       </div>

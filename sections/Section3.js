@@ -45,7 +45,7 @@ function Section3({ menuRef }) {
       <div
         id="home"
         ref={ref}
-        className="bg-vid flex lg:pt-0 pt-20  flex-col lg:flex-row lg:space-x-8 lg:justify-evenly justify-between items-center   w-screen lg:h-screen h-[160vh]"
+        className="bg-vid flex lg:pt-0 pt-20  flex-col-reverse lg:flex-row lg:space-x-8 lg:justify-evenly justify-between items-center   w-screen lg:h-screen h-[160vh]"
       >
         {/* main red box */}
 
@@ -55,10 +55,10 @@ function Section3({ menuRef }) {
           animate={effect1}
           className="flex rounded-lg bg-glass text-white flex-col  justify-evenly items-start px-14  lg:w-[45%] w-[90%]	 h-[613px]"
         >
-          <h1 className="lg:text-[45px] text-xl md:text-3xl ">
+          <h1 className=" lg:-ml-0 -ml-9 lg:w-full w-[300px] lg:text-[45px] text-2xl md:text-3xl ">
             Introducing Streamer Token
           </h1>
-          <h2 className="lg:text-[24px] text-sm md:text-xl">
+          <h2 className="lg:text-[24px] text-sm md:text-xl ">
             Every streamer mints 11.3 millions of his personal streamer tokens
             and viewers are able to access streamer tokens on Neebmle-swap
             <br />
@@ -69,12 +69,14 @@ function Section3({ menuRef }) {
           </h2>
 
           <div className="space-x-2 lg:space-x-2 items-center  w-full flex lg:flex-row flex-col  ">
-            <button className="rounded py-2 px-4 lg:text-lg md:text-sm text-xs border-2 border-white">
+            <button className="lg:w-[20vw] w-[70vw] rounded py-2 px-4 lg:text-lg md:text-sm text-xs border-2 border-white">
               More on this in Neemble Whitepaper
             </button>
-            <button className="rounded bg-[#0E491E] py-2 px-5 md:text-sm text-xs lg:text-lg border-[3px]  border-[#33BD27]">
-              Buy NMBL
-            </button>
+            <div className="lg:py-0 py-2">
+              <button className="rounded bg-[#0E491E] py-1 md:py-2 px-5 md:text-sm text-xs lg:text-lg border-[3px]  border-[#33BD27]">
+                Buy NMBL
+              </button>
+            </div>
           </div>
         </motion.div>
 

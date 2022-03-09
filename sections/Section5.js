@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import teams from "../assets/teams.png";
+import teams from "../assets/team1.png";
 import Image from "next/image";
 function Section5({ menuRef }) {
   const { ref, inView } = useInView({
@@ -45,7 +45,7 @@ function Section5({ menuRef }) {
       <div
         id="home"
         ref={ref}
-        className="bg-vid  flex lg:pt-0 flex-col lg:flex-row lg:space-x-8  lg:justify-around  justify-evenly items-center   w-screen lg:h-screen h-[160vh]"
+        className="bg-vid  flex lg:pt-0 flex-col-reverse lg:flex-row lg:space-x-8  lg:justify-around  justify-evenly items-center   w-screen lg:h-screen h-[170vh]"
       >
         {/* main red box */}
         {/* image box */}
@@ -57,12 +57,12 @@ function Section5({ menuRef }) {
         {/* {//45%% width} */}
         <motion.div
           animate={effect1}
-          className="px-14 flex bg-glass-purple bg-black bg-opacity-60 text-white flex-col  justify-evenly items-start  lg:w-2/4 w-[90%]	 h-[681px]"
+          className="lg:px-14 px-4 flex bg-glass-purple bg-black bg-opacity-60 text-white flex-col  justify-evenly items-start  lg:w-2/4 w-[90%]	lg:h-[681px] h-[551px]"
         >
-          <h1 className="lg:text-[45px] md:text-3xl text-xl ">
+          <h1 className="lg:w-full  lg:text-[45px] md:text-3xl text-2xl ">
             Introducing Team Streams
           </h1>
-          <h2 className="lg:text-[25px] md:text-xl text-sm -mt-8 ">
+          <h2 className="lg:text-[25px] md:text-xl text-base -mt-8 ">
             This has never been done. Even though most streamed games are
             team-games and teams can have multiple streamers.
             <br />

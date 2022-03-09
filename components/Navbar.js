@@ -53,9 +53,11 @@ function Navbar({ navColor, navBtn, menu1, menu2, menu3, menu4, menu5 }) {
           </ul>
         </div>
         <div className="hidden lg:flex justify-center items-center space-x-6">
-          <button className="link-click text-base  border-2 border-[#36B9FF] h-8 px-4  rounded">
-            Twitter
-          </button>
+          <a href="https://twitter.com/neemble" target="_blank">
+            <button className="link-click text-base  border-2 border-[#36B9FF] h-8 px-4  rounded">
+              Twitter
+            </button>
+          </a>
           <div
             className={`flex justify-center items-center space-x-2 border-[3px] ${navBtn} py-3 px-6 rounded`}
           >
@@ -93,28 +95,45 @@ function Navbar({ navColor, navBtn, menu1, menu2, menu3, menu4, menu5 }) {
       {menu ? (
         <div className="fixed z-50 rounded-xl link  bg-[#0d1733] w-[240px] h-[400px] right-6 top-16">
           <ul className="py-4 cursor-pointer text-white flex flex-col px-6">
-            <li className="py-2 hover:border-b-2 hover:border-cyan-300">
-              Home
+            <li
+              onClick={() => window.location.replace("/#home")}
+              className="py-2 hover:border-b-2 hover:border-cyan-300"
+            >
+              Neemble
             </li>
-            <li className="py-2 hover:border-b-2 hover:border-cyan-300">
+            <li
+              onClick={() => window.location.replace("/#streamer")}
+              className="py-2 hover:border-b-2 hover:border-cyan-300"
+            >
               Streamer Token
             </li>
-            <li className="py-2 hover:border-b-2 hover:border-cyan-300">
+            <li
+              onClick={() => window.location.replace("/#tekenomics")}
+              className="py-2 hover:border-b-2 hover:border-cyan-300"
+            >
               Tekenomics
             </li>
-            <li className="py-2 hover:border-b-2 hover:border-cyan-300">
+            <li
+              onClick={() => window.location.replace("/#roadmap")}
+              className="py-2 hover:border-b-2 hover:border-cyan-300"
+            >
               Road Map
             </li>
-            <li className="py-2 hover:border-b-2 hover:border-cyan-300">
+            <li
+              onClick={() => window.location.replace("/#team")}
+              className="py-2 hover:border-b-2 hover:border-cyan-300"
+            >
               Team
             </li>
             <li className="py-2 hover:border-b-2 hover:border-cyan-300">
               Social
             </li>
             <li className="py-4">
-              <button className=" text-sm  border-2 border-blue-500 py-1 px-2 rounded">
-                Twitter
-              </button>
+              <a href="https://twitter.com/neemble" target="_blank">
+                <button className=" text-sm  border-2 border-blue-500 py-1 px-2 rounded">
+                  Twitter
+                </button>
+              </a>
             </li>
             <div>
               <button className="text-lg link border-2  border-[#00D8FA]  py-1 px-3 rounded">

@@ -50,18 +50,18 @@ function Platform({ menuRef }) {
       <div
         id="streamer"
         ref={ref}
-        className=" pb-40 w-screen bg-royal flex flex-col items-center justify-center"
+        className="lg:pb-40 pb-20 w-screen bg-royal flex flex-col items-center justify-center"
       >
-        <div className="flex space-x-4 lg:space-x-40">
+        <div className="flex lg:flex-row flex-col lg:space-x-40">
           <motion.div
             animate={anime}
-            className="w-[160px] md:w-[300px] lg:w-[400px]  h-[auto] hover:border-2 hover:rounded-md cursor-pointer"
+            className="w-[200px] md:w-[300px] lg:w-[400px]  h-[auto] hover:border-2 hover:rounded-md cursor-pointer"
           >
             <Image src={p1} placeholder="blur" />
           </motion.div>
           <motion.div
             animate={anime}
-            className=" w-[160px] md:w-[300px] lg:w-[400px] h-[auto] hover:border-2 hover:rounded-md cursor-pointer"
+            className=" w-[200px] md:w-[300px] lg:w-[400px] h-[auto] hover:border-2 hover:rounded-md cursor-pointer"
           >
             <Image src={p2} placeholder="blur" />
           </motion.div>
